@@ -1,12 +1,17 @@
 # Bot Menu
 
-Bot Menu adalah dashboard bot Android yang berjalan **offline-first**. Command disimpan di SQLite lokal perangkat, jadi tidak memerlukan API key atau database eksternal.
+Bot Menu adalah aplikasi Android **offline-first** untuk membuat pengalaman bot lokal tanpa API key.
 
 ## Fitur
-- Dashboard gelap dengan status LOCAL.
-- Tambah dan hapus command bot.
-- Penyimpanan permanen menggunakan SQLite.
-- Generator template hook JSON yang dapat disalin ke clipboard.
+- Dashboard gelap modern dengan status LOCAL.
+- Chat bot lokal dengan auto-reply untuk `/start`, `/help`, dan `/info`.
+- Command tambahan dapat dibuat dari dashboard.
+- Riwayat chat dan command tersimpan permanen di SQLite perangkat.
+- Generator template hook JSON yang bisa disalin ke clipboard.
+- Tidak mengirim data ke internet dan tidak membutuhkan database online.
 
 ## Build
-Buka folder ini di Android Studio atau AIDE, lalu jalankan Gradle sync dan build. Template hook hanya menghasilkan payload lokal; untuk menerima webhook sungguhan, sambungkan payload tersebut ke server milik sendiri dan tambahkan autentikasi.
+Buka repository ini di Android Studio atau AIDE, lakukan Gradle sync, lalu build aplikasi.
+
+## Catatan keamanan
+Generator hook hanya membuat payload contoh. Untuk webhook sungguhan, gunakan backend milik sendiri, validasi input, autentikasi, dan jangan menaruh token rahasia di aplikasi Android.
